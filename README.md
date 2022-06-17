@@ -5,4 +5,4 @@ This makes it easier to create a quote as it avoids having to search for the pro
 
 To create this I used Python, SQL and Flask. 
 
-The project is thoroughly explained in the PPT that I attached to the repository. 
+The project is thoroughly explained in this video : https://www.youtube.com/watch?v=ndy8F78UoOI&ab_channel=St%C3%A9phanieCr%C3%AAteur. 
