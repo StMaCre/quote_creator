@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block body %}
+<!--Showcase-->
+<section class="bg-dark text-light p-5 text-center text-sm-start">
+  <div class="container">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <div>
+        <h1>Make your own <span class="text-warning">proposals</span></h1>
+        <p class="lead my-4">
+          Write your proposal here. First, you will need the codes that you will
+          type into the form below. Once you have entered everything, you will
+          be able to export your project on Excel.
+        </p>
+        <button
+          class="btn btn-primary btn-lg"
+          style="
+            background-color: #66dac3;
+            border: #66dac3;
+            text-align: center;
+            margin-left: 25px;
+          "
+        >
+          <a href="/code"> Begin your project </a>
+        </button>
+      </div>
+      <div>
+        <img
+          class="img-fluid d-none d-sm-block"
+          style="padding: 30px"
+          src="static/img1.png"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

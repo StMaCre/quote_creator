@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block body %}
+<br />
+<br />
+<h1>Proposal Maker</h1>
+<p>Insert your code in the form below and click submit.</p>
+<br />
+<div class="d-sm-flex">
+  <div class="col-auto">
+    <form action="/code" method="post">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="code"
+          name="code"
+          class="form-control"
+          placeholder="Code"
+          aria-label="Code"
+          aria-describedby="basic-addon2"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <table class="table" id="table">
+    <thead>
+      <tr>
+        <th>Manufacturer</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+      {% for dictionary in LIST %}
+      <tr>
+        <td></td>
+        <td>{{dictionary["code"]}}</td>
+        <td>{{dictionary["name"]}}</td>
+        <td>{{dictionary["price"]}} EUR</td>
+      </tr>
+      {% endfor %}
+    </thead>
+  </table>
+</div>
+<br />
+<br />
+<button
+  type="print"
+  class="btn btn-light"
+  style="float: right; margin-right: 30px"
+  id="Excel"
+>
+  Export to Excel
+</button>
+
+<button
+  type="print"
+  class="btn btn-light"
+  style="float: right; margin-right: 30px"
+>
+  <a href="/clear" style="text-decoration: none; color: black">Clear data</a>
+</button>
+
+<button
+  type="print"
+  class="btn btn-light"
+  style="float: right; margin-right: 30px"
+>
+  <a href="/delete" style="text-decoration: none; color: black"
+    >Delete last entry</a
+  >
+</button>
+
+<br />
+<br />
+<br />
+
+{% endblock %}
